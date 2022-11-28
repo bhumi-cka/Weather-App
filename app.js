@@ -21,15 +21,28 @@ app.post("/", function(req, res) {
     response.on("data", function(data) {
       const weatherData = JSON.parse(data);
       const temp = weatherData.main.temp;
-      console.log(temp);
+      // console.log(temp);
       const weatherDescription = weatherData.weather[0].description;
-      console.log(weatherDescription);
+      // console.log(weatherDescription);
       const icon = weatherData.weather[0].icon;
       const imageURL = "http://openweathermap.org/img/wn/" + icon + ".png";
+      const feelsLike = weatherData.main.feels_like;
+      const minTemp = weatherData.main.temp_min;
+      const maxTemp = weatherData.main.temp_max;
+      const pressure = weatherData.main.pressure;
+      const humidity = weatherData.main.humidity;
+      const windSpeed = weatherData.wind.speed;
+      const cloudiness = weatherData.clouds.all;
 
-      res.write("<p>The weather is currently "+weatherDescription+".</p>");
-      res.write("<h1>The temperature in "+query+" is "+temp+" degrees Celcius.</h1>");
+      res.write("<p>The temperature in Pune is "+temp+"   | "+minTemp+" to "+maxTemp+".</p>");
       res.write('<img src=' + imageURL+">");
+      res.write("<p>Feels like "+feelsLike+".</p>");
+      res.write(weatherDescription);
+      res.write("<p>Pressure: "+pressure+"hPa</p>");
+      res.write("<p>Humidity: "+humidity+"%</p>");
+      res.write("<p>Wind Speed: "+windSpeed+"m/s</p>");
+      res.write("<p>Cloudiness: "+cloudiness+"%</p>");
+
       res.send();
 
     })
