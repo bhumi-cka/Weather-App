@@ -34,7 +34,7 @@ app.post("/", function(req, res) {
       const windSpeed = weatherData.wind.speed;
       const cloudiness = weatherData.clouds.all;
 
-      res.write("<p>The temperature in Pune is "+temp+"   | "+minTemp+" to "+maxTemp+".</p>");
+      res.write("<p>The temperature in "+query+" is "+temp+"   | "+minTemp+" to "+maxTemp+".</p>");
       res.write('<img src=' + imageURL+">");
       res.write("<p>Feels like "+feelsLike+".</p>");
       res.write(weatherDescription);
