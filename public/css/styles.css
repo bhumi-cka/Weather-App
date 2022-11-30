@@ -1,0 +1,58 @@
+body {
+  background-color: #E4E9FD;
+  font-family: Montserrat, sans-serif;
+  padding: 20px;
+  color: #341766;
+}
+
+.box {
+  padding: 20px;
+  background-color: #A683E3;
+  width: 40%;
+  margin: auto;
+  margin-top: 160px;
+  text-align: center;
+  border-radius: 12px;
+}
+
+.city-input {
+  border: none;
+  margin: 10px;
+  padding: 3px;
+  padding-left: 7px;
+  border-radius: 5px;
+}
+
+.form-group > label {
+  font-size: 1.5rem;
+}
+
+
+/* result */
+h1 {
+  font-size: 3rem;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 30px 100px 70px;
+  text-align: left;
+  background-color: #e7ddf7;
+  width: 210px;
+  margin: auto;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.grid i {
+  margin-block: auto;
+
+}
+
+.grid p {
+  margin-block: auto;
+}

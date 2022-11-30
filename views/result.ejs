@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/3715e2b643.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="box">
+
+
+    <p><b><%= query %>, <%= temp %>°C. <%= weatherDescription %></b></p>
+    <p><b>Maximum: <%= maxTemp %>°C. Minimum: <%= minTemp %>°C</b></p>
+
+    <div class="grid">
+      <i class="fa-solid fa-gauge"></i> <p>Pressure: </p> <p><%= pressure %>hPa</p>
+      <i class="fa-solid fa-temperature-three-quarters"></i> <p>Feels like: </p> <p><%= feelsLike %>°C</p>
+      <i class="fa-solid fa-droplet"></i> <p>Humidity: </p> <p><%= humidity %>%</p>
+      <i class="fa-solid fa-wind"></i> <p>Wind Speed: </p> <p><%= windSpeed %>m/s</p>
+      <i class="fa-solid fa-cloud"></i> <p>Cloudiness: </p> <p><%= cloudiness %>%</p>
+    </div>
+    </div>
+
+
+  </body>
+</html>
