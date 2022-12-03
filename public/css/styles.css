@@ -48,11 +48,11 @@ p {
   border-radius: 5px;
 }
 
-.grid i {
+i.grid {
   margin-block: auto;
 
 }
 
-.grid p {
+p.grid {
   margin-block: auto;
 }
